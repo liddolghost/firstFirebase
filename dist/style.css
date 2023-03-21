@@ -20,37 +20,13 @@ section {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-   /* background: linear-gradient(to bottom, #553e68, #230b36); */
 }
 
 section .color {
     position: absolute;
     filter: blur(150px);
 }
-/*
-section .color:nth-child(1) {
-    top: -350px;
-    width: 600px;
-    height: 600px;
-    background: #36145d;
-}
 
-section .color:nth-child(2) {
-    bottom: -150px;
-    left: 100px;
-    width: 500px;
-    height: 500px;
-    background: #52522b;
-}
-
-section .color:nth-child(3) {
-    bottom: 50px;
-    right: 100px;
-    width: 300px;
-    height: 300px;
-    background: #003a47;
-}
-*/
 .box {
     position: relative;
 }
