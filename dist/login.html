@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>༊*·˚Login</title>
-    <link rel="icon" type="image/x-icon" href="Picture1.ico">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="./bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
-    <!-- Bootstrap theme -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>༊*·˚Login</title>
+  <link rel="icon" type="image/x-icon" href="Picture1.ico">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+  <!-- Bootstrap theme -->
 </head>
 <body>
-    <section>
-          <div class="box"> 
-              <div class="square" style="--i:0;"></div>
-              <div class="square" style="--i:1;"></div>
-              <div class="square" style="--i:2;"></div>
-              <div class="square" style="--i:3;"></div>
-              <div class="square" style="--i:4;"></div>
-              <div class="container">
-                  <div class="form">
-                      <h2>Login Form</h2>
-                      <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data" >
-                          <div class="inputBox">
-                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
-                          </div>
-                          <div class="inputBox">
-                            <input type="password" name="password" id="password" class="form-control"  placeholder="Enter your password">
-                          </div>
-                          <div class="inputBox">
-                            <button type="button" id="login" name="login" class="btn btn-success">Login</button>
-                          </div>
-                          <p class="forget">No account yet ? <a href="index.html">Register</a> </p>
-                      </form>
-                  </div>
-              </div>
+  <section>
+    <div class="box"> 
+        <div class="square" style="--i:0;"></div>
+        <div class="square" style="--i:1;"></div>
+        <div class="square" style="--i:2;"></div>
+        <div class="square" style="--i:3;"></div>
+        <div class="square" style="--i:4;"></div>
+        <div class="container">
+            <div class="form">
+              <h2>Login Form</h2>	
+                <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data" >
+                    <div class="inputBox">     
+                      <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div class="inputBox">
+                      <input type="password" name="login_password" id="login_password" class="form-control"  placeholder="Enter your password">
+                    </div>
+                    <div class="inputBox">
+                      <button type="button" id="login" name="login" class="btn btn-success">Login</button>
+                    </div>
+                    <p class="forget">No account yet ? <a href="index.html">Register</a></p>
+                </form>
+            </div>	
           </div>
-      </section>
+    </div>
+  </section>
     
 </body>
-</html>
 
 <script type="module">
 
@@ -54,21 +53,20 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyCPHrk9tRvLa0QUBN9qgStp462XduK2xUQ",
-    authDomain: "first-firebase-75634.firebaseapp.com",
-    projectId: "first-firebase-75634",
-    storageBucket: "first-firebase-75634.appspot.com",
-    messagingSenderId: "971745682119",
-    appId: "1:971745682119:web:5bfa473907586ecb1b94e2",
-    measurementId: "G-HSX9N50J5V"
+      apiKey: "AIzaSyCPHrk9tRvLa0QUBN9qgStp462XduK2xUQ",
+      authDomain: "first-firebase-75634.firebaseapp.com",
+      projectId: "first-firebase-75634",
+      storageBucket: "first-firebase-75634.appspot.com",
+      messagingSenderId: "971745682119",
+      appId: "1:971745682119:web:5bfa473907586ecb1b94e2",
+      measurementId: "G-HSX9N50J5V"
   };
   
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const auth = getAuth();
-  console.log(app)
-  
+  console.log(app);
   
   //----- New Registration code start	  
   document.getElementById("register").addEventListener("click", function() {
@@ -103,6 +101,7 @@
       const user = userCredential.user;
       console.log(user);
       alert(user.email+" Login successfully!!!");
+      window.location.href= "home.html";
       document.getElementById('logout').style.display = 'block';
       // ...
     })
@@ -129,4 +128,9 @@
   });
   //----- End
   
+  
+  
   </script>
+</html>
+
+
