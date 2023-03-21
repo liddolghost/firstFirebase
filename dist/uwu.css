@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000; /** move text header to front (front sa pic)**/
+}
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a 
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;     /** color sa home about work contact pag i hover nimo**/
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before
+{
+    content: '';        /** para mawala ang line between photo above and paragraphs below**/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1a1443, transparent);
+    z-index: 1000;
+}
+section img
+{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon
+{
+    mix-blend-mode: screen; /** pang blend sa moon sa photo to bg (para mawala ang black na circle sa moon)**/
+}
+section img#mountains_front
+{
+    z-index: 10;
+}
+#text
+{
+    position: absolute;
+    right: -350px;          /** moon light text hides at the back of the front mountain **/
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;       /**** font size sa moon light na word****/
+    z-index: 9;
+}
+#btn                        /** dili sya mag work if ang btn sa html kay class, dapat id for it to work**/
+{
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;             /** call the explore button to the front **/
+    transform: translateY(100px);
+}
+.sec                        
+{
+    position: relative;
+    padding: 100px;
+    background: url('purple.gif');
+    background-attachment: fixed;
+    background-size: cover;
+    /*background: #170334;   bg color sa backgrround malamang**/
+}
+.sec h2
+{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.box {
+    opacity: 0.8;
+    top: -170px;
+    left: 400px;
+    position: inherit;
+    width: 480px; 
+    background: url('purple.gif');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 13px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    -webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.63); 
+    box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.63);
+    font-family: 'Century Gothic', sans-serif;
+    outline: 2px outset #16161d;
+}
+
+.profile {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    outline: 2px outset #7538d2;
+    outline-offset: 3px;
+    margin-top: 80px;
+    align-items: center;
+    text-align: center;
+}
+
+.box1 {
+    width: 1200px; 
+    background: url('cat.gif');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: -5%;
+    color: white;
+    -webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.63); 
+    box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.63);
+    font-family: 'Century Gothic', sans-serif;
+    outline: 2px outset #16161d;
+}
+
+.box1 .textbox {
+    width: 1000px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 2%;
+    margin-top: -3%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-left: 60px;
+}
+
+.box1 .textbox p{
+    margin-top: 10px;
+}
+
+
+/*** customized scrollbar OwO ***/
+
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(transparent, #2b1055);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background: linear-gradient(transparent, #1c0522 );
+}
+::-webkit-scrollbar-track
+{
+    background: #470d5567;
+}
+::-webkit-scrollbar-button
+{
+    background: #000;
+}
+

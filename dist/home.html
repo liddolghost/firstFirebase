@@ -4,45 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>༊*·˚こんにちは世界</title>
-    <link rel="icon" type="image/x-icon" href="Picture1.ico">
-    <script defer src="./bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
-	<!-- Bootstrap theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>༊*·˚Home</title>
+    <link rel="icon" type="image/x-icon" href="mooon.png">
+    <link rel="stylesheet" type="text/css" href="uwu.css">
 </head>
-<body style="margin: 0; 
-            padding: 0;
-            background-image: url('purple.gif');
-            background-attachment: fixed;
-            background-size: cover;">
-            <!--background-color: rgba(111, 13, 197, 0.415);-->
-    <div style="width: 450px; background: rgba(0, 0, 0, 0.4);
-                padding: 40px;
-                text-align: center;
-                margin: auto;
-                margin-top: 5%;
-                color: white;
-                -webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.63); 
-                box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.63);
-                font-family: 'Century Gothic', sans-serif;
-                outline: 2px outset #16161d;
-                ">
-        <img src="profile.jpg" alt="" style="border-radius: 50%;
-                                            width: 200px;
-                                            height: 200px;
-                                            outline: 2px outset #7538d2;
-                                            outline-offset: 3px;">
-        <h1 style="font-size: 40px;
-                    letter-spacing: 4px;
-                    font-weight: 100;
-                    color: #7538d2;
-                    ">Hello World!</h1>
-        <h5 style="font-size: 20px;
-                    letter-spacing: 3px;
-                    font-weight: 100;
-                    ">I'm Jucille Escala, a 3rd year BSIT student, major in Database. And idk what to say after that</h5>
-        <p style="text-align: center;">but am broke</p>
-        <p style="color:#7538d2 ;text-align: center;">-&#128156;&#127815;&#128156;-</p>
+<body>
+    <header>
+        <a href="#" class="logo">Welcome!</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Hobbies</a></li>
+            <li><a href="#">Interest</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Welcome to</h2>
+        <a href="#sec" id="btn">Explore</a>    <!-- this button will go down the id=sec -->
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Jucille's Corner</h2>
+        <div class="box">
+            <h1>Get to know this hooman&#128062;</h1>
+        </div>
+        <div class="box1">
+                <img src="profile.jpg" class="profile" alt="profile">
+                <div class="textbox">
+                    <h2 style="text-shadow: 1px 2px 3px rgba(28,110,164,0.5);">༊*·˚About Jucille</h2>
+                    <p>˗ˏˋ She goes by her real name; Jucille Escala.
+                    <p>˗ˏˋ Her friends like to call her <i>'Chen'</i> or <i>'Seng'</i>. 
+                    <p>˗ˏˋ She's 20 years old and usually get attached to fictional characters. 
+                    <p>˗ˏˋ She's an IT third-year student, majoring Database in
+                        Mindanao State University Iligan Institute of Technology under the College of Computer Studies.
+                    <p>˗ˏˋ She likes to read fictions and daydreams.
+                    <p>˗ˏˋ Mostly into reading manga, manhwa, and manhua.
+                    <p>˗ˏˋ She likes to listen to music as well and watch whatever that interest her or get recommended by tiktok.
+                    <p>˗ˏˋ She considers herself as a cat person as they usually wouldn't care about their hoomans. It's okay, that's part
+                        of their charm.
+                    <p>˗ˏˋ She can be seen as usually talking to herself and is very much into angst.
+                    <p>˗ˏˋ The thoughts and ideas of death intrigue her, and as much more for past lives.
+                    <p>˗ˏˋ She likes to cook... but they don't want her. The burns were enough proof.
+                    <p>˗ˏˋ She sense herself changing, but we don't know which way.
+                    </p>
+                </div>
+            </div>
+
+
+
     </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';         // para mag move ang mga stars sa bg pa left as you scroll down
+            moon.style.top = value * 1.05 + 'px';            // para mag move ang mga moon sa bg pa top as you scroll down
+            mountains_behind.style.top = value * 0.5 + 'px';    // para mag move ang mga back mountain sa bg the same direction sa moon as you scroll down
+            mountains_front.style.top = value * 0 + 'px';       // for the front mountain
+            text.style.marginRight = value * 4 + 'px';          // para mag move ang text na moon light to right
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+    
+</body>
+</html>
