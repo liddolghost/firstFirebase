@@ -22,7 +22,7 @@
               <div class="container">
                   <div class="form">
                       <h2>Login Form</h2>
-                      <form name="registration_form" id="registration_form" method="post" action="#" enctype="multipart/form-data" >
+                      <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data" >
                           <div class="inputBox">
                             <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
                           </div>
@@ -103,7 +103,6 @@
       const user = userCredential.user;
       console.log(user);
       alert(user.email+" Login successfully!!!");
-      window.location.href = "index.html"
       document.getElementById('logout').style.display = 'block';
       // ...
     })
