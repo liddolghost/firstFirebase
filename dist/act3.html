@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>༊*·˚Activity 3</title>
+    <link rel="stylesheet" href="gstyle.css">
+    <link rel="icon" type="image/x-icon" href="mooon.png">
+    <script defer src="./bundle.js"></script>
+    <script src="src/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">Learn Cloud Firestore...</a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="interest.html">Interest</a></li>
+            <li><a href="act3.html" class="active">Activity 3</a></li>
+        </ul>
+    </header>
+    <div class="buttons">
+        <button class="save">Save</button>
+        <button class="get-data">Get Data</button>
+        <button class="change-data">Change Data</button>
+        <button class="delete-data">Delete Data</button>
+    </div>
+
+    <script type="text/javascript">
+        const buttons = document.querySelectorAll('.save, .get-data, .change-data, .delete-data');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+
+                let ripples = document.createElement('span');
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                this.appendChild(ripples);
+
+                setTimeout(() => {
+                    ripples.remove()
+                },1000);
+            })
+
+        })
+    </script>
+</body>
+</html>

@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(purple.gif);
+    background: url(puter.gif);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -35,7 +35,11 @@ header
 }
 header .logo
 {
-    color: #fff;
+    /* color: #fff; #7538d2; */
+    background: linear-gradient(to right, #ffffff, #0e0404);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -1px 1px 1px #7538d2;
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
@@ -65,4 +69,53 @@ header ul li a.active
 {
     background: #fff;
     color: #2b1055;     /** color sa home about work contact pag i hover nimo**/
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.save,
+.get-data,
+.change-data,
+.delete-data {
+    margin: 0 10px;
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    color: aliceblue;
+    overflow: hidden;
+    background: linear-gradient(90deg, #7538d2, #2b1055);
+}
+.delete-data  {
+    background: linear-gradient(90deg, #7538d2, #881b2d);
+}
+
+span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }
